@@ -4,4 +4,4 @@ cache:
     directories:
     - $HOME/.m2
 script: 
-mvn verify -Ptest
+    mvn verify -Ptest
