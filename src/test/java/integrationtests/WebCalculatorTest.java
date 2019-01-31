@@ -108,17 +108,20 @@ public class WebCalculatorTest {
         }
         assertEquals(expected, res);
     }
-    @Test (expected = org.junit.ComparisonFailure.class)
-    public void testDivWebZero() throws IOException{
+    @Test
+    public void testDivWebZero(){
         System.out.println("add test web");
         HttpClient instance = new HttpClient("http://localhost:7777/mavenproject2/calculator?");
         String expected = "ERROR, illegal inputs/ by zero";
         String res="";
-        
+        try {
             res = instance.makeHttpRequest("operation=div&n1=10&n2=0");
+        } catch (IOException ex) {
+            System.out.println("Failure in makeHttpRequest");
+        }
         assertEquals(expected, res);
     }
-    @Test (expected = org.junit.ComparisonFailure.class)
+    @Test
     public void testBadOperant(){
         System.out.println("add test web");
         HttpClient instance = new HttpClient("http://localhost:7777/mavenproject2/calculator?");
