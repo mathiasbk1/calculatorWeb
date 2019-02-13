@@ -9,8 +9,8 @@ function getFunction(e) {
         console.log(url);
         
         fetch(url)
-        .then(res => res.text())
-        .then(d => {document.getElementById("result").innerHTML = "<h5>" + d + "</h5>"});
+        .then(res => res.json())
+        .then(d => {document.getElementById("result").innerHTML = "<h5>" + d.res + "</h5>"});
     }
 
 }
