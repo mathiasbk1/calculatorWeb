@@ -193,7 +193,7 @@
                         <artifactId>tomcat7-maven-plugin</artifactId>  
                         <version>2.2</version>  
                         <configuration>
-                            <url>http://104.248.32.172/manager/text</url>  
+                            <url>http://matbk.com/manager/text</url>  
                             <server>TomcatServer</server>
                             <path>/calculator</path>
                             <username>admin</username>
