@@ -23,26 +23,27 @@ import utils.HttpClient;
  * @author Mathias
  */
 public class WebCalculatorTest {
-    
+
     public WebCalculatorTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
-     /**
+
+    /**
      * Test of div method, of class Calculator.
      */
     @Test
@@ -55,13 +56,13 @@ public class WebCalculatorTest {
         int result = instance.div(n1, n2);
         assertEquals(expResult, result);
     }
-    
+
     @Test
-    public void testAdd(){
+    public void testAdd() {
         System.out.println("add test web");
         HttpClient instance = new HttpClient("http://localhost:7777/mavenproject2/calculator?");
-        String expected = "Result of: 5+10= 15";
-        String res="";
+        String expected = "{\"n1\" : 5, \"n2\" : 10, \"opreration\" : \"add\", \"res\" : \"15\"}";
+        String res = "";
         try {
             res = instance.makeHttpRequest("operation=add&n1=5&n2=10");
         } catch (IOException ex) {
@@ -69,12 +70,18 @@ public class WebCalculatorTest {
         }
         assertEquals(expected, res);
     }
+
     @Test
-    public void testMul(){
+    public void testMul() {
         System.out.println("add test web");
         HttpClient instance = new HttpClient("http://localhost:7777/mavenproject2/calculator?");
-        String expected = "Result of: 5*10= 50";
-        String res="";
+        String expected = "{\n"
+                + "  \"n1\" : 5,\n"
+                + "  \"n2\" : 10,\n"
+                + "  \"opreration\" : \"mul\",\n"
+                + "  \"res\" : 50\n"
+                + "}";
+        String res = "";
         try {
             res = instance.makeHttpRequest("operation=mul&n1=5&n2=10");
         } catch (IOException ex) {
@@ -82,12 +89,18 @@ public class WebCalculatorTest {
         }
         assertEquals(expected, res);
     }
+
     @Test
-    public void testSub(){
+    public void testSub() {
         System.out.println("add test web");
         HttpClient instance = new HttpClient("http://localhost:7777/mavenproject2/calculator?");
-        String expected = "Result of: 5-10= -5";
-        String res="";
+        String expected = "{\n"
+                + "  \"n1\" : 5,\n"
+                + "  \"n2\" : 10,\n"
+                + "  \"opreration\" : \"sub\",\n"
+                + "  \"res\" : -5\n"
+                + "}";
+        String res = "";
         try {
             res = instance.makeHttpRequest("operation=sub&n1=5&n2=10");
         } catch (IOException ex) {
@@ -95,12 +108,18 @@ public class WebCalculatorTest {
         }
         assertEquals(expected, res);
     }
+
     @Test
-    public void testDivWeb(){
+    public void testDivWeb() {
         System.out.println("add test web");
         HttpClient instance = new HttpClient("http://localhost:7777/mavenproject2/calculator?");
-        String expected = "Result of: 10/5= 2";
-        String res="";
+        String expected = "{\n"
+                + "  \"n1\" : 10,\n"
+                + "  \"n2\" : 5,\n"
+                + "  \"opreration\" : \"div\",\n"
+                + "  \"res\" : 2\n"
+                + "}";
+        String res = "";
         try {
             res = instance.makeHttpRequest("operation=div&n1=10&n2=5");
         } catch (IOException ex) {
