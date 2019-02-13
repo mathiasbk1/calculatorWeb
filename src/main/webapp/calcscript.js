@@ -57,7 +57,7 @@ function equals(e) {
     }
     if (mul1 > -1){
         numbers = text.split("*");
-        console.log(numbers)
+        console.log(numbers);
         n1 = parseInt(numbers[0]);
         n2 = parseInt(numbers[1]);
         res = mul(n1,n2);
@@ -65,7 +65,7 @@ function equals(e) {
     }
     if (div1 > -1){
         numbers = text.split("/");
-        console.log(numbers)
+        console.log(numbers);
         n1 = parseInt(numbers[0]);
         n2 = parseInt(numbers[1]);
         res = div(n1,n2);
