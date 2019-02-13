@@ -10,7 +10,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            #container{
+            .container{
                 width: 226px;
                 height: 274px;
                 border: 3px solid darkblue;
@@ -31,10 +31,13 @@ and open the template in the editor.
             .t4{
                 width: 219px;
             }
+            .test {
+                border: 3px solid darkblue;
+            }
         </style>
     </head>
     <body>
-        <div id="container">
+        <div class="container" id="container">
             <div id="display" class="t4"></div>
             <div id="buttons">
                 <div class="t1">7</div>
@@ -56,10 +59,11 @@ and open the template in the editor.
                 <div class="t1">.</div>
                 <div class="t1">+</div>
                 <div id="calculate" class="t1">=</div>
-                <script src="calcscript.js"></script>
             </div>
+            
+        <button class="container" id="clear">Clear</button>
         </div>
-        <button id="clear">Clear</button>
 
+        <script src="calcscript.js"></script>
     </body>
 </html>

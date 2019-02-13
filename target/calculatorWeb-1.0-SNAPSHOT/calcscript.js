@@ -76,5 +76,5 @@ function equals(e) {
 document.getElementById("clear").addEventListener("click",function clear(e){
     e.preventDefault();
     document.getElementById("display").innerText = "";
-})
+});
 
