@@ -72,3 +72,9 @@ function equals(e) {
         document.getElementById("display").innerText = ""+res;
     }
 }
+
+document.getElementById("clear").addEventListener("click",function clear(e){
+    e.preventDefault();
+    document.getElementById("display").innerText = "";
+})
+
