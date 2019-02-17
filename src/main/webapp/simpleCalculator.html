@@ -9,14 +9,15 @@ and open the template in the editor.
         <title>Simple calculator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <style>
-            .container{
+            .container1{
                 width: 226px;
                 height: 274px;
                 border: 3px solid darkblue;
                 margin: auto
             }
-            .t1, .t4{
+            .tOne, .tFour{
                 border: 1px solid black;
                 height: 48px;
                 margin-left: 3px;
@@ -25,44 +26,77 @@ and open the template in the editor.
                 text-align: center;
                 line-height: 48px;
             }
-            .t1{
+            .tOne{
                 width: 48px;
             }
-            .t4{
+            .tFour{
                 width: 219px;
             }
-            .test {
+            .testy {
                 border: 3px solid darkblue;
             }
         </style>
     </head>
     <body>
-        <div class="container" id="container">
-            <div id="display" class="t4"></div>
-            <div id="buttons">
-                <div class="t1">7</div>
-                <div class="t1">8</div>
-                <div class="t1">9</div>
-                <div class="t1">/</div>
-
-                <div class="t1">4</div>
-                <div class="t1">5</div>
-                <div class="t1">6</div>
-                <div class="t1">*</div>
-
-                <div class="t1">1</div>
-                <div class="t1">2</div>
-                <div class="t1">3</div>
-                <div class="t1">-</div>
-
-                <div class="t1">0</div>
-                <div class="t1">.</div>
-                <div class="t1">+</div>
-                <div id="calculate" class="t1">=</div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">MMRS - CA-1</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/simpleCalculator.html">Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/calculatorAPI.html">Calculator API</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/array.html">Dynamic API</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/getUser.html">Dynamic UI via fetch</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <br>
-        <button class="container" id="clear">Clear</button>
-        </div>
+        </nav>
+        <br>
+
+        <section class="py-5">
+            <div class="container1" id="container">
+                <div id="display" class="tFour"></div>
+                <div id="buttons">
+                    <div class="tOne">7</div>
+                    <div class="tOne">8</div>
+                    <div class="tOne">9</div>
+                    <div class="tOne">/</div>
+
+                    <div class="tOne">4</div>
+                    <div class="tOne">5</div>
+                    <div class="tOne">6</div>
+                    <div class="tOne">*</div>
+
+                    <div class="tOne">1</div>
+                    <div class="tOne">2</div>
+                    <div class="tOne">3</div>
+                    <div class="tOne">-</div>
+
+                    <div class="tOne">0</div>
+                    <div class="tOne">.</div>
+                    <div class="tOne">+</div>
+                    <div id="calculate" class="tOne">=</div>
+                </div>
+                <br>
+                <button class="container1" id="clear">Clear</button>
+            </div>
+        </section>
 
         <script src="calcScript.js"></script>
     </body>
