@@ -1,6 +1,3 @@
-document.getElementById("getAll").addEventListener("click", getFunctionUsers);
-document.getElementById("getUser").addEventListener("click", getFunctionUser);
-
 function getFunctionUser(e) {
     e.preventDefault();
     var url = "https://jsonplaceholder.typicode.com/users/" + document.getElementById("userId").value;
@@ -17,6 +14,7 @@ function getFunctionUser(e) {
                         "<p> Geo(lat,ing): " + d.address.geo.lat + "," + d.address.geo.lng + "</p>"
             });
 }
+document.getElementById("getUser").addEventListener("click", getFunctionUser);
 
 function getFunctionUsers(e) {
     e.preventDefault();
@@ -26,7 +24,8 @@ function getFunctionUsers(e) {
             .then(function (d) {
                 document.getElementById("result").innerHTML = "<table id = table><th>Name</th><th>Phone</th></table>";
                 for (var i = 0; i < d.length; i++) {
-                    document.getElementById("table").innerHTML += "<tr><td>"  + d[i].name + "</td><td>" + d[i].phone + "</td></tr>";
+                    document.getElementById("table").innerHTML += "<tr><td>" + d[i].name + "</td><td>" + d[i].phone + "</td></tr>";
                 }
             });
 }
+document.getElementById("getAll").addEventListener("click", getFunctionUsers);
