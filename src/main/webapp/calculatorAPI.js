@@ -9,7 +9,7 @@ function getFunction(e) {
         
         fetch(url)
         .then(res => res.json())
-        .then(d => {document.getElementById("result").innerHTML = "<h5>" + d.res + "</h5>"});
+        .then(data => {document.getElementById("result").innerHTML = "<h5> Result: " + data.res + "</h5>"});
     }
 
 }
