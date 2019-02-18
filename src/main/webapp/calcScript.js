@@ -20,14 +20,14 @@ function appendToDiv(e) {
     e.preventDefault();
     var text = document.getElementById("display").innerText;
     text += e.target.innerText;
-    if(e.target.innerText.length == 1)
+    if(e.target.innerText.length == 1) 
     document.getElementById("display").innerText = text;
 }
 
 document.getElementById("calculate").addEventListener("click", equals)
 
 function equals(e) {
-    e.stopPropagation();
+    e.stopPropagation(); //?
     var text = "" + document.getElementById("display").innerText;
     
     var add1 = text.indexOf("+");
